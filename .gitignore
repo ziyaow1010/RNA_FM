@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+
+# logs
+logs/*.log
+logs/*.out
+logs/*.err
+
+# large raw / processed data (regenerable; not versioned)
+data/raw/
+data/processed/
+data/contact_eval/raw/
+data/contact_eval/splits/
+
+# trained models, checkpoints, embeddings, predictions (too large for git)
+outputs/bert_mlm/
+outputs/fm_single/
+outputs/fm_hybrid_mamba_kmer1/
+outputs/fm_hybrid_mamba_kmer6/
+outputs/fm_decoder_kmer1/
+outputs/fm_decoder_kmer6/
+outputs/fm_bert_kmer1
+outputs/fm_bert_kmer6
+outputs/fm_hybrid_mamba_kmer1_300m/
+outputs/contact_pred/embeddings/
+outputs/contact_pred/kmer1-BERT/
+outputs/contact_pred/kmer1-Hybrid/
+outputs/contact_pred/kmer1-Hybrid-300M/
+outputs/contact_pred/kmer6-BERT/
+outputs/contact_pred/kmer6-Hybrid/
+outputs/contact_pred/smoke/
+outputs/contact_eval/kmer1-BERT/
+outputs/contact_eval/kmer1-hybrid/
+outputs/contact_eval/smoke/
+
+# weight / array blobs anywhere
+*.pt
+*.npy
+*.safetensors
+*.bin
+*.pth

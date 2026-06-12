@@ -1,0 +1,51 @@
+{
+  "weights_unchanged": true,
+  "checksum_before": 3525.1177374564004,
+  "checksum_after": 3525.1177374564004,
+  "perturb_only_rows": [
+    6
+  ],
+  "expected_row": 6,
+  "perturb_only_position_i": true,
+  "epsilon_sweep": [
+    {
+      "epsilon": 0.01,
+      "S_shape": [
+        73,
+        73
+      ],
+      "S_raw_mean": 0.004390928310194981,
+      "S_raw_std": 0.005763067550111562,
+      "S_raw_max": 0.060884807258844376,
+      "apc_nan": false,
+      "apc_inf": false,
+      "symmetric": true
+    },
+    {
+      "epsilon": 0.1,
+      "S_shape": [
+        73,
+        73
+      ],
+      "S_raw_mean": 0.04379279035805739,
+      "S_raw_std": 0.05755726920374645,
+      "S_raw_max": 0.6141603589057922,
+      "apc_nan": false,
+      "apc_inf": false,
+      "symmetric": true
+    },
+    {
+      "epsilon": 1.0,
+      "S_shape": [
+        73,
+        73
+      ],
+      "S_raw_mean": 0.4682090567181271,
+      "S_raw_std": 0.5737047803809302,
+      "S_raw_max": 6.668325901031494,
+      "apc_nan": false,
+      "apc_inf": false,
+      "symmetric": true
+    }
+  ]
+}

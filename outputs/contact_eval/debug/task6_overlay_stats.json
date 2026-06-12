@@ -1,0 +1,106 @@
+{
+  "apc_improved": 8,
+  "apc_worse": 2,
+  "rows": [
+    {
+      "id": "16s_C.elegans_domain4",
+      "family": "16s",
+      "L": 73,
+      "auprc_raw": 0.005,
+      "auprc_apc": 0.005,
+      "top_near_diag_frac": 0.2,
+      "top_canonical_frac": 0.3,
+      "top_gold_frac": 0.0
+    },
+    {
+      "id": "16s_H.sapiens.mito_domain4",
+      "family": "16s",
+      "L": 120,
+      "auprc_raw": 0.004,
+      "auprc_apc": 0.004,
+      "top_near_diag_frac": 0.91,
+      "top_canonical_frac": 0.27,
+      "top_gold_frac": 0.0
+    },
+    {
+      "id": "16s_C.reinhardtii.mito_domain4",
+      "family": "16s",
+      "L": 115,
+      "auprc_raw": 0.003,
+      "auprc_apc": 0.003,
+      "top_near_diag_frac": 0.9,
+      "top_canonical_frac": 0.4,
+      "top_gold_frac": 0.0
+    },
+    {
+      "id": "5s_Fusarium-pseudograminearum-1",
+      "family": "5s",
+      "L": 119,
+      "auprc_raw": 0.101,
+      "auprc_apc": 0.103,
+      "top_near_diag_frac": 0.42,
+      "top_canonical_frac": 0.61,
+      "top_gold_frac": 0.11
+    },
+    {
+      "id": "5s_Geobacillus-stearothermophilus-2",
+      "family": "5s",
+      "L": 117,
+      "auprc_raw": 0.234,
+      "auprc_apc": 0.242,
+      "top_near_diag_frac": 0.33,
+      "top_canonical_frac": 0.73,
+      "top_gold_frac": 0.24
+    },
+    {
+      "id": "5s_Samia-cynthia-1",
+      "family": "5s",
+      "L": 119,
+      "auprc_raw": 0.226,
+      "auprc_apc": 0.231,
+      "top_near_diag_frac": 0.26,
+      "top_canonical_frac": 0.57,
+      "top_gold_frac": 0.26
+    },
+    {
+      "id": "5s_Protomyces-inundatus-1",
+      "family": "5s",
+      "L": 119,
+      "auprc_raw": 0.156,
+      "auprc_apc": 0.159,
+      "top_near_diag_frac": 0.43,
+      "top_canonical_frac": 0.6,
+      "top_gold_frac": 0.2
+    },
+    {
+      "id": "5s_Ustilago-maydis-1",
+      "family": "5s",
+      "L": 118,
+      "auprc_raw": 0.222,
+      "auprc_apc": 0.224,
+      "top_near_diag_frac": 0.34,
+      "top_canonical_frac": 0.8,
+      "top_gold_frac": 0.26
+    },
+    {
+      "id": "5s_Mycoplasma-gallisepticum-3",
+      "family": "5s",
+      "L": 112,
+      "auprc_raw": 0.142,
+      "auprc_apc": 0.161,
+      "top_near_diag_frac": 0.5,
+      "top_canonical_frac": 0.6,
+      "top_gold_frac": 0.2
+    },
+    {
+      "id": "5s_Acidiphilium-acidophilum-1",
+      "family": "5s",
+      "L": 120,
+      "auprc_raw": 0.006,
+      "auprc_apc": 0.006,
+      "top_near_diag_frac": 0.5,
+      "top_canonical_frac": 0.38,
+      "top_gold_frac": 0.0
+    }
+  ]
+}

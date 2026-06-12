@@ -1,0 +1,62 @@
+{
+  "kmer1": {
+    "bert": {
+      "eval_loss": 0.5663126608360685,
+      "token_acc": 0.7561803066604652,
+      "per_base_acc": 0.7561803066604652,
+      "per_base_nll": 0.5663126608360685,
+      "per_base_ppl": 1.7617588574160747,
+      "masked_tokens": 767559,
+      "masked_bases": 767559,
+      "peak_eval_gpu_gb": 0.905487872,
+      "train_runtime_s": 7659.4209,
+      "train_samples_per_second": 3625.114,
+      "param_count": 4939786,
+      "tokens_per_sec": 1856058.368
+    },
+    "hybrid": {
+      "eval_loss": 0.4345578101210603,
+      "token_acc": 0.8241112409599783,
+      "per_base_acc": 0.8241112409599783,
+      "per_base_nll": 0.4345578101210603,
+      "per_base_ppl": 1.544280042945846,
+      "masked_tokens": 767559,
+      "masked_bases": 767559,
+      "peak_eval_gpu_gb": 1.816679936,
+      "train_runtime_s": 8894.9831,
+      "train_samples_per_second": 3121.565,
+      "param_count": 5114890,
+      "tokens_per_sec": 1598241.28
+    }
+  },
+  "kmer6": {
+    "bert": {
+      "eval_loss": 2.5030487220954645,
+      "token_acc": 0.6127541161011053,
+      "per_base_acc": 0.8130645950890212,
+      "per_base_nll": 0.41717478701591076,
+      "per_base_ppl": 1.5176677583723102,
+      "masked_tokens": 129370,
+      "masked_bases": 776220,
+      "peak_eval_gpu_gb": 1.60745728,
+      "train_runtime_s": 3050.1503,
+      "train_samples_per_second": 9103.247,
+      "param_count": 8954126,
+      "tokens_per_sec": 873911.7119999999
+    },
+    "hybrid": {
+      "eval_loss": 2.421672970188763,
+      "token_acc": 0.6207776145938008,
+      "per_base_acc": 0.8202957924299812,
+      "per_base_nll": 0.4036121616981272,
+      "per_base_ppl": 1.497223153852998,
+      "masked_tokens": 129370,
+      "masked_bases": 776220,
+      "peak_eval_gpu_gb": 1.608196608,
+      "train_runtime_s": 3696.618,
+      "train_samples_per_second": 7511.264,
+      "param_count": 9126670,
+      "tokens_per_sec": 721081.344
+    }
+  }
+}

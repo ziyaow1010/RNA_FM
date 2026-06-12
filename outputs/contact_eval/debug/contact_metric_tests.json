@@ -1,0 +1,31 @@
+{
+  "A_perfect": {
+    "AUPRC": 1.0,
+    "P_at_L": 0.3,
+    "best_F1": 0.9999999999995
+  },
+  "B_random": {
+    "mean_AUPRC_over_40": 0.008988805648786881,
+    "positive_rate": 0.00683526999316473
+  },
+  "C_transpose_invariant": {
+    "equal": true,
+    "auprc_S": 1.0,
+    "auprc_ST": 1.0
+  },
+  "D_minsep_filter": {
+    "num_candidates": 21,
+    "expected_candidates": 21,
+    "near_diag_excluded": true,
+    "AUPRC": 1.0
+  },
+  "checks": {
+    "A_auprc_near_1": true,
+    "A_f1_near_1": true,
+    "B_auprc_near_posrate": true,
+    "C_transpose_invariant": true,
+    "D_near_diag_excluded": true,
+    "D_auprc_near_1_after_filter": true
+  },
+  "all_passed": true
+}

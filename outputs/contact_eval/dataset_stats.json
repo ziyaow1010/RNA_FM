@@ -1,0 +1,20 @@
+{
+  "archiveII": {
+    "num_sequences": 1188,
+    "families": {
+      "16s": 67,
+      "23s": 15,
+      "5s": 200,
+      "RNaseP": 200,
+      "grp1": 71,
+      "srp": 200,
+      "tRNA": 200,
+      "telomerase": 35,
+      "tmRNA": 200
+    },
+    "len_min": 32,
+    "len_max": 512,
+    "mean_pairs": 65.20791245791246,
+    "path": "/data/ziyao/RNA/data/contact_eval/archiveII.jsonl"
+  }
+}

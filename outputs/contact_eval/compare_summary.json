@@ -1,0 +1,58 @@
+[
+  {
+    "model": "kmer1-BERT",
+    "method": "categorical_jacobian",
+    "dataset": "archiveII",
+    "num_sequences": 99,
+    "mean_AUPRC": 0.05216995853014427,
+    "mean_AUROC": 0.6197948716290325,
+    "mean_P_at_L": 0.026093826518841512,
+    "mean_P_at_L2": 0.04178659817816223,
+    "mean_P_at_num_gold": 0.06374167419442202,
+    "mean_best_F1": 0.09500087427409235,
+    "median_AUPRC": 0.007810724475570876,
+    "median_best_F1": 0.033898305084257396
+  },
+  {
+    "model": "kmer1-BERT",
+    "method": "embedding_perturb",
+    "dataset": "archiveII",
+    "num_sequences": 99,
+    "mean_AUPRC": 0.027331962699621626,
+    "mean_AUROC": 0.5890547826001032,
+    "mean_P_at_L": 0.014862534095847377,
+    "mean_P_at_L2": 0.022458783144514303,
+    "mean_P_at_num_gold": 0.032473805778591804,
+    "mean_best_F1": 0.05836848279909464,
+    "median_AUPRC": 0.006691490419259742,
+    "median_best_F1": 0.021978021977559718
+  },
+  {
+    "model": "kmer1-hybrid",
+    "method": "categorical_jacobian",
+    "dataset": "archiveII",
+    "num_sequences": 99,
+    "mean_AUPRC": 0.039701284043734214,
+    "mean_AUROC": 0.6764846153402619,
+    "mean_P_at_L": 0.02206084479613493,
+    "mean_P_at_L2": 0.03174689522451842,
+    "mean_P_at_num_gold": 0.04673329095763073,
+    "mean_best_F1": 0.07658583815013427,
+    "median_AUPRC": 0.011768475117229536,
+    "median_best_F1": 0.03571428571381696
+  },
+  {
+    "model": "kmer1-hybrid",
+    "method": "embedding_perturb",
+    "dataset": "archiveII",
+    "num_sequences": 99,
+    "mean_AUPRC": 0.010436560392193843,
+    "mean_AUROC": 0.5858792568650899,
+    "mean_P_at_L": 0.011597807346795403,
+    "mean_P_at_L2": 0.014203245069586328,
+    "mean_P_at_num_gold": 0.014985238429237241,
+    "mean_best_F1": 0.035003461668866,
+    "median_AUPRC": 0.006764191335594607,
+    "median_best_F1": 0.021052631578481997
+  }
+]

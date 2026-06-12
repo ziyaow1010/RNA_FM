@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-06-01T07:35:06.129357+00:00",
+  "input_file": "/data/ziyao/RNA/data/raw/rnacentral_active.fasta.gz",
+  "max_records": 1000,
+  "sequence_count": 1000,
+  "nucleotide_total": 775220,
+  "length_stats": {
+    "min": 52,
+    "max": 7935,
+    "mean": 775.22,
+    "median": 466.0,
+    "p50": 466.0,
+    "p75": 1402.25,
+    "p90": 1494.1,
+    "p95": 1521.0,
+    "p99": 2920.1099999999997
+  },
+  "alphabet_counts": {
+    "A": 200287,
+    "U": 0,
+    "T": 167997,
+    "C": 171758,
+    "G": 235040,
+    "N": 117,
+    "other": 21
+  },
+  "ambiguous_nucleotide_ratio": 0.0001780139831273703,
+  "duplicate_exact_sequence_count": 0,
+  "unique_sequence_count": 1000,
+  "top_longest_sequences": [
+    {
+      "id": "URS000194D381",
+      "taxid": null,
+      "length": 7935
+    },
+    {
+      "id": "URS0001958CF3",
+      "taxid": null,
+      "length": 6432
+    },
+    {
+      "id": "URS0001954C13",
+      "taxid": null,
+      "length": 4501
+    },
+    {
+      "id": "URS000195D18A",
+      "taxid": null,
+      "length": 4359
+    },
+    {
+      "id": "URS0001975DB5",
+      "taxid": null,
+      "length": 3733
+    },
+    {
+      "id": "URS000196C41D",
+      "taxid": null,
+      "length": 3647
+    },
+    {
+      "id": "URS000195087C",
+      "taxid": null,
+      "length": 3627
+    },
+    {
+      "id": "URS00019D6F55",
+      "taxid": null,
+      "length": 3604
+    },
+    {
+      "id": "URS00019BA68D",
+      "taxid": null,
+      "length": 3151
+    },
+    {
+      "id": "URS0001D3E368",
+      "taxid": null,
+      "length": 2931
+    },
+    {
+      "id": "URS000195A6E7",
+      "taxid": null,
+      "length": 2920
+    },
+    {
+      "id": "URS0002139711",
+      "taxid": null,
+      "length": 2894
+    },
+    {
+      "id": "URS000199A901",
+      "taxid": null,
+      "length": 2835
+    },
+    {
+      "id": "URS00019513C8",
+      "taxid": null,
+      "length": 2539
+    },
+    {
+      "id": "URS000213CA55",
+      "taxid": null,
+      "length": 2489
+    },
+    {
+      "id": "URS000194D2E9",
+      "taxid": null,
+      "length": 2420
+    },
+    {
+      "id": "URS000216866E",
+      "taxid": null,
+      "length": 2360
+    },
+    {
+      "id": "URS000195B9F5",
+      "taxid": null,
+      "length": 2249
+    },
+    {
+      "id": "URS0001A0BA74",
+      "taxid": null,
+      "length": 1920
+    },
+    {
+      "id": "URS0001A19677",
+      "taxid": null,
+      "length": 1842
+    }
+  ],
+  "top_taxonomy_ids": [],
+  "sample_records_file": "/data/ziyao/RNA/outputs/rnacentral_stats/sample_records.jsonl"
+}

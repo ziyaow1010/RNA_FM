@@ -1,0 +1,106 @@
+{
+  "base_token_ids": {
+    "A": 5,
+    "U": 6,
+    "C": 7,
+    "G": 8,
+    "N": 9
+  },
+  "special_ids": {
+    "[PAD]": 0,
+    "[UNK]": 1,
+    "[CLS]": 2,
+    "[SEP]": 3,
+    "[MASK]": 4
+  },
+  "sequences": [
+    {
+      "id": "16s_C.elegans_domain4",
+      "L": 73,
+      "logits_wt_shape": [
+        75,
+        10
+      ],
+      "base_logit_cols": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mutation_changed_tokens": 0,
+      "mutation_pos_token_index": -1,
+      "expected_pos": 6,
+      "attention_mask_all_ones": true,
+      "mask_id_in_mutated_input": 0,
+      "S_shape": [
+        73,
+        73
+      ],
+      "batched_vs_naive_max_abs_err": 2.572580811377456e-06,
+      "S_apc_has_nan": false,
+      "S_apc_has_inf": false,
+      "diag_zero": false,
+      "symmetric": true
+    },
+    {
+      "id": "16s_H.volcanii_domain4",
+      "L": 128,
+      "logits_wt_shape": [
+        130,
+        10
+      ],
+      "base_logit_cols": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mutation_changed_tokens": 1,
+      "mutation_pos_token_index": 6,
+      "expected_pos": 6,
+      "attention_mask_all_ones": true,
+      "mask_id_in_mutated_input": 0,
+      "S_shape": [
+        128,
+        128
+      ],
+      "batched_vs_naive_max_abs_err": 1.9966308469898664e-06,
+      "S_apc_has_nan": false,
+      "S_apc_has_inf": false,
+      "diag_zero": false,
+      "symmetric": true
+    },
+    {
+      "id": "16s_H.sapiens.mito_domain4",
+      "L": 120,
+      "logits_wt_shape": [
+        122,
+        10
+      ],
+      "base_logit_cols": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mutation_changed_tokens": 1,
+      "mutation_pos_token_index": 6,
+      "expected_pos": 6,
+      "attention_mask_all_ones": true,
+      "mask_id_in_mutated_input": 0,
+      "S_shape": [
+        120,
+        120
+      ],
+      "batched_vs_naive_max_abs_err": 1.750766362162981e-06,
+      "S_apc_has_nan": false,
+      "S_apc_has_inf": false,
+      "diag_zero": false,
+      "symmetric": true
+    }
+  ],
+  "base_ids_disjoint_from_special": true
+}

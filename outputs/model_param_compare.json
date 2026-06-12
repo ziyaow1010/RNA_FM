@@ -1,0 +1,23 @@
+{
+  "baseline_bert": {
+    "embedding": 134912,
+    "encoder": 4738560,
+    "mlm_head": 66314,
+    "total": 4939786
+  },
+  "hybrid_mamba": {
+    "embedding": 134912,
+    "encoder": 4911104,
+    "mlm_head": 68874,
+    "total": 5114890
+  },
+  "hybrid_layer_pattern": "TTMTTM",
+  "mamba": {
+    "d_state": 16,
+    "d_conv": 4,
+    "expand": 4,
+    "tie_word_embeddings": false
+  },
+  "total_diff_pct": 3.5447689434319627,
+  "within_10pct": true
+}

@@ -1,0 +1,65 @@
+{
+  "input_file": "/data/ziyao/RNA/data/raw/rnacentral_active.fasta.gz",
+  "max_records": 100000,
+  "sequence_count": 100000,
+  "total_nt": 75576963,
+  "min_len": 10,
+  "mean_len": 755.76963,
+  "max_len": 539010,
+  "alphabet_counts": {
+    "A": 20393985,
+    "T": 18495903,
+    "U": 3784,
+    "C": 16321220,
+    "G": 20135207,
+    "N": 223398,
+    "other": 3466
+  },
+  "other_characters": {
+    "R": 772,
+    "S": 578,
+    "K": 522,
+    "W": 394,
+    "M": 389,
+    "Y": 763,
+    "B": 10,
+    "H": 5,
+    "V": 3,
+    "D": 30
+  },
+  "empty_sequence_count": 0,
+  "header_parse_failures": 0,
+  "short_sequence_count_lt10": 0,
+  "long_sequence_count_gt100000": 24,
+  "sample_records": [
+    {
+      "header": "URS000149A9AF rRNA from 1 species",
+      "length": 397,
+      "sequence_prefix": "ATACGTAGGTGACAAGCGTTATCCGGATTTACTGGGCGTAAAGGGCGTGTAGGCGGTCTT"
+    },
+    {
+      "header": "URS00014A6508 rRNA from 1 species",
+      "length": 253,
+      "sequence_prefix": "TACGTAGGGTGCAAGCGTTGTCCGGAATTATTGGGCGTAAAGAGCTTGTAGGCGGTTTGT"
+    },
+    {
+      "header": "URS00014B639F rRNA from 1 species",
+      "length": 317,
+      "sequence_prefix": "CCCTTAGATGTTCTGGGCCGCACGCGTGCTACACTGACCGGCGCAACAAGTTTCTTTCCT"
+    },
+    {
+      "header": "URS00014B6922 rRNA from 1 species",
+      "length": 1456,
+      "sequence_prefix": "GAGTTTAGATCCTGGCTCAGAACGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAGC"
+    },
+    {
+      "header": "URS00014B7BDC rRNA from 1 species",
+      "length": 255,
+      "sequence_prefix": "TACGGGGGGAGCAAGCGTTGTTCGGATTTACTGGGCGTAAAGGGCGCGTAGGCGGTCGTG"
+    }
+  ],
+  "warnings": [
+    "DNA alphabet detected: U=3784 (\u22480), T=18495903 (many) \u2014 sequences are stored with T, not U (expected for the active set).",
+    "24 sequence(s) longer than 100000 nt."
+  ]
+}

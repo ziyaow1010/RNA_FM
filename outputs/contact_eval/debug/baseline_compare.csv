@@ -1,0 +1,6 @@
+method,num_sequences,mean_AUPRC,mean_P_at_L,mean_best_F1,median_AUPRC,median_best_F1
+random,99,0.006,0.0049,0.0217,0.0055,0.0169
+distance,99,0.0052,0.0017,0.0145,0.0052,0.0134
+canonical_random,99,0.0157,0.013,0.0424,0.0142,0.0369
+kmer1-BERT_jacobian,99,0.0522,0.0261,0.095,0.0078,0.0339
+kmer1-hybrid_jacobian,99,0.0397,0.0221,0.0766,0.0118,0.0357

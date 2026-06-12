@@ -1,0 +1,67 @@
+{
+  "total": 1188,
+  "families": {
+    "16s": 67,
+    "23s": 15,
+    "5s": 200,
+    "RNaseP": 200,
+    "grp1": 71,
+    "srp": 200,
+    "tRNA": 200,
+    "telomerase": 35,
+    "tmRNA": 200
+  },
+  "random": {
+    "train": 950,
+    "val": 118,
+    "test": 120
+  },
+  "lfo": {
+    "16s": {
+      "train": 1009,
+      "val": 112,
+      "test": 67
+    },
+    "23s": {
+      "train": 1056,
+      "val": 117,
+      "test": 15
+    },
+    "5s": {
+      "train": 890,
+      "val": 98,
+      "test": 200
+    },
+    "RNaseP": {
+      "train": 890,
+      "val": 98,
+      "test": 200
+    },
+    "grp1": {
+      "train": 1006,
+      "val": 111,
+      "test": 71
+    },
+    "srp": {
+      "train": 890,
+      "val": 98,
+      "test": 200
+    },
+    "tRNA": {
+      "train": 890,
+      "val": 98,
+      "test": 200
+    },
+    "telomerase": {
+      "train": 1038,
+      "val": 115,
+      "test": 35
+    },
+    "tmRNA": {
+      "train": 890,
+      "val": 98,
+      "test": 200
+    }
+  },
+  "lfo_skipped": []
+}
