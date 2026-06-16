@@ -17,6 +17,19 @@ Pretraining/eval entry points: `scripts/train_hybrid650_mlm.py`, `scripts/rna_st
 `scripts/run_hybrid650.sh`, `scripts/rinalmo_ss_finetune.py`, `scripts/run_ss_ft_650m_ep1.sh`,
 `scripts/eval_rinalmo_weights.py`.
 
+**Load the model** (downloads the epoch-1 checkpoint from
+[`Ziyao1010/RNA_FM`](https://huggingface.co/Ziyao1010/RNA_FM) and runs a forward pass):
+```bash
+python scripts/load_hybrid650.py                 # or --model_dir <local> / --seq ACGU...
+```
+```python
+from scripts.load_hybrid650 import load_hybrid, encode
+import torch
+model, _ = load_hybrid()                         # HybridMambaForMaskedLM (664M), eval mode
+ids = torch.tensor([encode("GGGCUAUUAGCUCAGUUGG")]).cuda()
+out = model(input_ids=ids, attention_mask=torch.ones_like(ids))   # out.logits: [1, L+2, 10]
+```
+
 ---
 
 # RNAcentral Download & Analysis Pipeline
