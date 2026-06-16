@@ -85,6 +85,38 @@ def parse_args():
     return p.parse_args()
 
 
+class EpochCheckpointCallback(TrainerCallback):
+    """Save a lightweight per-epoch model snapshot (weights only) that survives
+    the rolling save_total_limit=1 checkpoint cleanup.  Written to
+    <output_dir>/epoch_checkpoints/epoch{N}/  after each epoch end."""
+
+    def __init__(self, output_dir, steps_per_epoch):
+        self.out = Path(output_dir) / "epoch_checkpoints"
+        self.spe = steps_per_epoch
+
+    def on_save(self, args, state, control, **kw):
+        if not state.is_world_process_zero:
+            return
+        epoch = round(state.global_step / self.spe)
+        if epoch < 1:
+            return
+        import shutil
+        ckpt_src = Path(args.output_dir) / f"checkpoint-{state.global_step}"
+        epoch_dir = self.out / f"epoch{epoch}"
+        if ckpt_src.exists() and not epoch_dir.exists():
+            epoch_dir.mkdir(parents=True, exist_ok=True)
+            for fname in ("pytorch_model.bin", "model.safetensors",
+                          "config.json", "model_config.json"):
+                src = ckpt_src / fname
+                if src.exists():
+                    shutil.copy2(src, epoch_dir / fname)
+            # copy the model_config.json from output dir if not in checkpoint
+            cfg_src = Path(args.output_dir) / "model_config.json"
+            if cfg_src.exists() and not (epoch_dir / "model_config.json").exists():
+                shutil.copy2(cfg_src, epoch_dir / "model_config.json")
+            print(f"[epoch_ckpt] Saved epoch {epoch} -> {epoch_dir}", flush=True)
+
+
 class CurveCallback(TrainerCallback):
     """Logs train loss to a history file + redraws the MLM-loss / per-base-PPL
     curve; computes fixed-val loss & PPL once per epoch."""
@@ -211,8 +243,9 @@ def main():
         remove_unused_columns=False, ignore_data_skip=True)
 
     curve_cb = CurveCallback(args.output_dir, model, val_batches, steps_per_epoch, args.val_steps)
+    epoch_ckpt_cb = EpochCheckpointCallback(args.output_dir, steps_per_epoch)
     trainer = Trainer(model=model, args=targs, train_dataset=train_ds,
-                      data_collator=collator, callbacks=[curve_cb])
+                      data_collator=collator, callbacks=[curve_cb, epoch_ckpt_cb])
 
     ckpts = list(Path(args.output_dir).glob("checkpoint-*"))
     trainer.train(resume_from_checkpoint=bool(ckpts))
