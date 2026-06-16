@@ -45,6 +45,14 @@ if [ -z "$EPOCH_CKPT" ]; then
 fi
 
 echo "[ss_ft] Epoch $EPOCH checkpoint: $EPOCH_CKPT"
+
+# Regenerate CT splits if missing (small, <10s)
+CT_ROOT="data/contact_eval/raw/ct/fam-fold"
+if [ ! -d "$CT_ROOT/5s/train" ]; then
+    echo "[ss_ft] CT splits missing, regenerating..."
+    python scripts/make_ct_splits.py
+fi
+
 echo "[ss_ft] Start: $(date)"
 
 OUT="outputs/fm_hybrid_650m/ss_eval/epoch${EPOCH}"
