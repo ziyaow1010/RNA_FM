@@ -1,3 +1,24 @@
+# RNA Hybrid Foundation Model (Transformer + Mamba) — vs RiNALMo-Giga
+
+> **Current focus → read [`HANDOFF.md`](HANDOFF.md).** It has the full state, verified
+> faithfulness checklist, key findings, and exact run commands to continue on a bigger box (H200).
+
+We pretrain an **RNA Hybrid (Transformer+Mamba) foundation model** (`HybridMambaForMaskedLM`,
+**664M** params) on full RNAcentral and compare it to **RiNALMo-Giga (650M)** on the **ArchiveII
+leave-one-family-out** secondary-structure benchmark, using RiNALMo's **exact official downstream
+pipeline** (head / BCE-on-upper-triangle loss / canonical+greedy decoder / flexible-F1 /
+per-fold threshold tuning / gradual-unfreeze fine-tune). Only the **backbone** differs.
+
+**Validated:** our eval pipeline reproduces RiNALMo's *own* released giga 5s weights at **F1 0.882**
+(paper 0.88), and our decoder+metric are bit-identical to theirs — so the eval is not the variable.
+Pretraining ran ~1/6 epochs on 8×L20 before moving to H200; see `HANDOFF.md` to finish it.
+
+Pretraining/eval entry points: `scripts/train_hybrid650_mlm.py`, `scripts/rna_stream_dataset.py`,
+`scripts/run_hybrid650.sh`, `scripts/rinalmo_ss_finetune.py`, `scripts/run_ss_ft_650m_ep1.sh`,
+`scripts/eval_rinalmo_weights.py`.
+
+---
+
 # RNAcentral Download & Analysis Pipeline
 
 A small, self-contained pipeline that downloads the
