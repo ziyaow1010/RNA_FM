@@ -1,0 +1,21 @@
+{
+  "family": "tRNA",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo",
+  "num_train": 2978,
+  "num_val": 330,
+  "num_test": 557,
+  "skipped_long_or_noemb": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "tuned_threshold": 0.08,
+  "best_val_F1": 0.8880540677958619,
+  "mean_F1": 0.8227708516453011,
+  "mean_precision": 0.9194502426316121,
+  "mean_recall": 0.7586558690287756,
+  "median_F1": 0.8500000000000001,
+  "metric": "flexible(+/-1)_F1",
+  "max_len": 512
+}

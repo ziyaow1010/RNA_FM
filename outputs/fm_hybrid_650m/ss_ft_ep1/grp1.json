@@ -1,0 +1,15 @@
+{
+  "family": "grp1",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo+gradual-unfreeze-FT",
+  "num_train": 3412,
+  "num_val": 379,
+  "num_test": 74,
+  "tuned_threshold": 0.14,
+  "best_val_F1": 0.8991463292764872,
+  "mean_F1": 0.1811672525967408,
+  "mean_precision": 0.2372991513997563,
+  "mean_recall": 0.15006182714205485,
+  "median_F1": 0.1708972211484774,
+  "metric": "flexible(+/-1)_F1"
+}

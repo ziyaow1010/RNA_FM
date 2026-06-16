@@ -1,0 +1,17 @@
+{
+  "epoch": 1,
+  "checkpoint_step": 30278,
+  "macro_F1": 0.4312,
+  "family_F1": {
+    "5s": 0.7234,
+    "16s": 0.3446,
+    "23s": 0.3825,
+    "grp1": 0.136,
+    "srp": 0.393,
+    "telomerase": 0.1038,
+    "RNaseP": 0.4568,
+    "tmRNA": 0.518,
+    "tRNA": 0.8228
+  },
+  "method": "frozen-probe RiNALMo SS LFO (flexible F1)"
+}

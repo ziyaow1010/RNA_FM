@@ -1,0 +1,80 @@
+{
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo SS (flexible F1, canonical+greedy decoder, val-threshold tuning)",
+  "frozen_macro_F1": 0.7166,
+  "finetune_macro_F1": 0.4288,
+  "per_family": {
+    "5s": {
+      "frozen_F1": 0.7166,
+      "finetune_F1": 0.8042,
+      "finetune_precision": 0.9205,
+      "finetune_recall": 0.7185,
+      "finetune_threshold": 0.09,
+      "n_test": 1283
+    },
+    "16s": {
+      "frozen_F1": null,
+      "finetune_F1": 0.4235,
+      "finetune_precision": 0.722,
+      "finetune_recall": 0.3191,
+      "finetune_threshold": 0.09,
+      "n_test": 67
+    },
+    "23s": {
+      "frozen_F1": null,
+      "finetune_F1": 0.3156,
+      "finetune_precision": 0.4953,
+      "finetune_recall": 0.2458,
+      "finetune_threshold": 0.1,
+      "n_test": 15
+    },
+    "grp1": {
+      "frozen_F1": null,
+      "finetune_F1": 0.1513,
+      "finetune_precision": 0.1827,
+      "finetune_recall": 0.133,
+      "finetune_threshold": 0.11,
+      "n_test": 74
+    },
+    "srp": {
+      "frozen_F1": null,
+      "finetune_F1": 0.4862,
+      "finetune_precision": 0.5982,
+      "finetune_recall": 0.4273,
+      "finetune_threshold": 0.12,
+      "n_test": 918
+    },
+    "telomerase": {
+      "frozen_F1": null,
+      "finetune_F1": 0.1291,
+      "finetune_precision": 0.1573,
+      "finetune_recall": 0.1121,
+      "finetune_threshold": 0.11,
+      "n_test": 35
+    },
+    "RNaseP": {
+      "frozen_F1": null,
+      "finetune_F1": 0.489,
+      "finetune_precision": 0.6914,
+      "finetune_recall": 0.3834,
+      "finetune_threshold": 0.15,
+      "n_test": 454
+    },
+    "tmRNA": {
+      "frozen_F1": null,
+      "finetune_F1": 0.6317,
+      "finetune_precision": 0.7406,
+      "finetune_recall": 0.5572,
+      "finetune_threshold": 0.09,
+      "n_test": 462
+    },
+    "tRNA": {
+      "frozen_F1": null,
+      "finetune_F1": null,
+      "finetune_precision": null,
+      "finetune_recall": null,
+      "finetune_threshold": null,
+      "n_test": null
+    }
+  }
+}

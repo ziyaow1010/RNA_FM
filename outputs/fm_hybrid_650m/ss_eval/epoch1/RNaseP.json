@@ -1,0 +1,21 @@
+{
+  "family": "RNaseP",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo",
+  "num_train": 3070,
+  "num_val": 341,
+  "num_test": 454,
+  "skipped_long_or_noemb": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "tuned_threshold": 0.05,
+  "best_val_F1": 0.8978284093296953,
+  "mean_F1": 0.4568166666057951,
+  "mean_precision": 0.5846809048128639,
+  "mean_recall": 0.37856507945602175,
+  "median_F1": 0.4835883071177189,
+  "metric": "flexible(+/-1)_F1",
+  "max_len": 512
+}

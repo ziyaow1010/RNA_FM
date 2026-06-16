@@ -1,0 +1,15 @@
+{
+  "family": "telomerase",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo+gradual-unfreeze-FT",
+  "num_train": 3447,
+  "num_val": 383,
+  "num_test": 35,
+  "tuned_threshold": 0.11,
+  "best_val_F1": 0.8750463489745068,
+  "mean_F1": 0.12913129635804127,
+  "mean_precision": 0.15731152878524385,
+  "mean_recall": 0.11205691731746673,
+  "median_F1": 0.1297297297297297,
+  "metric": "flexible(+/-1)_F1"
+}

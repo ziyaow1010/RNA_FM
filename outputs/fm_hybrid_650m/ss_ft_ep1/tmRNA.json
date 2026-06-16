@@ -1,0 +1,15 @@
+{
+  "family": "tmRNA",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo+gradual-unfreeze-FT",
+  "num_train": 3063,
+  "num_val": 340,
+  "num_test": 462,
+  "tuned_threshold": 0.07,
+  "best_val_F1": 0.9031440837812891,
+  "mean_F1": 0.5960042956292877,
+  "mean_precision": 0.6742926160755769,
+  "mean_recall": 0.5382983706291324,
+  "median_F1": 0.6373626373626373,
+  "metric": "flexible(+/-1)_F1"
+}

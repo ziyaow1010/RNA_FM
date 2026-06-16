@@ -1,0 +1,21 @@
+{
+  "family": "23s",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo",
+  "num_train": 3465,
+  "num_val": 385,
+  "num_test": 15,
+  "skipped_long_or_noemb": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "tuned_threshold": 0.11,
+  "best_val_F1": 0.91632218516943,
+  "mean_F1": 0.3825260729808106,
+  "mean_precision": 0.5951089975885372,
+  "mean_recall": 0.2871493990381635,
+  "median_F1": 0.32857142857142857,
+  "metric": "flexible(+/-1)_F1",
+  "max_len": 512
+}

@@ -1,0 +1,7 @@
+[grp1] train/val/test = 3412/379/74 (skipped >512nt or no-emb: 0/0/0)
+  [grp1] epoch  5 loss=0.0137 val_F1=0.7199 (thr=0.01)
+  [grp1] epoch 10 loss=0.0108 val_F1=0.7885 (thr=0.01)
+  [grp1] epoch 15 loss=0.0042 val_F1=0.8571 (thr=0.02)
+  [grp1] epoch 20 loss=0.0017 val_F1=0.8873 (thr=0.11)
+  [grp1] epoch 25 loss=0.0009 val_F1=0.8992 (thr=0.08)
+[grp1] TEST F1=0.1360 P=0.1699 R=0.1166 (thr=0.08, n=74)

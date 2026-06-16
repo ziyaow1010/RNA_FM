@@ -1,0 +1,21 @@
+{
+  "family": "tmRNA",
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo",
+  "num_train": 3063,
+  "num_val": 340,
+  "num_test": 462,
+  "skipped_long_or_noemb": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "tuned_threshold": 0.06,
+  "best_val_F1": 0.9092499075590956,
+  "mean_F1": 0.5179691763328486,
+  "mean_precision": 0.5989204834168069,
+  "mean_recall": 0.46355323106841817,
+  "median_F1": 0.5400535928354839,
+  "metric": "flexible(+/-1)_F1",
+  "max_len": 512
+}

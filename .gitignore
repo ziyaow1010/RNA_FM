@@ -40,3 +40,8 @@ outputs/contact_eval/smoke/
 *.safetensors
 *.bin
 *.pth
+
+# 650M run: exclude checkpoint dirs + the 15MB val cache (weights already covered by *.pt/*.bin)
+outputs/fm_hybrid_650m/checkpoint-*/
+outputs/fm_hybrid_650m/ss_ft_ep1_model/
+outputs/fm_hybrid_650m/val_seqs.txt

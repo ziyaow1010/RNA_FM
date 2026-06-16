@@ -1,0 +1,7 @@
+[srp] train/val/test = 2653/294/918 (skipped >512nt or no-emb: 0/0/0)
+  [srp] epoch  5 loss=0.0070 val_F1=0.8420 (thr=0.23)
+  [srp] epoch 10 loss=0.0265 val_F1=0.8251 (thr=0.01)
+  [srp] epoch 15 loss=0.0048 val_F1=0.8908 (thr=0.06)
+  [srp] epoch 20 loss=0.0012 val_F1=0.9082 (thr=0.08)
+  [srp] epoch 25 loss=0.0007 val_F1=0.9237 (thr=0.06)
+[srp] TEST F1=0.3930 P=0.5550 R=0.3183 (thr=0.06, n=918)

@@ -1,0 +1,7 @@
+[RNaseP] train/val/test = 3070/341/454 (skipped >512nt or no-emb: 0/0/0)
+  [RNaseP] epoch  5 loss=0.0090 val_F1=0.8210 (thr=0.02)
+  [RNaseP] epoch 10 loss=0.0243 val_F1=0.8133 (thr=0.01)
+  [RNaseP] epoch 15 loss=0.0078 val_F1=0.8590 (thr=0.03)
+  [RNaseP] epoch 20 loss=0.0023 val_F1=0.8816 (thr=0.04)
+  [RNaseP] epoch 25 loss=0.0012 val_F1=0.8978 (thr=0.05)
+[RNaseP] TEST F1=0.4568 P=0.5847 R=0.3786 (thr=0.05, n=454)

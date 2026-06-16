@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import torch
 import torch.nn as nn
+from torch.utils.checkpoint import checkpoint
 from transformers import BertConfig
 from transformers.modeling_outputs import MaskedLMOutput
 from transformers.models.bert.modeling_bert import (
@@ -73,12 +74,16 @@ class HybridMambaConfig(BertConfig):
     model_type = "hybrid_mamba_bert"
 
     def __init__(self, layer_pattern="TTMTTM", mamba_d_state=16, mamba_d_conv=4,
-                 mamba_expand=2, tie_word_embeddings=False, **kwargs):
+                 mamba_expand=2, tie_word_embeddings=False,
+                 attn_implementation="sdpa", **kwargs):
         super().__init__(tie_word_embeddings=tie_word_embeddings, **kwargs)
         self.layer_pattern = layer_pattern.upper()
         self.mamba_d_state = mamba_d_state
         self.mamba_d_conv = mamba_d_conv
         self.mamba_expand = mamba_expand
+        # transformer attention kernel: "sdpa" (FlashAttention, low-memory) or "eager".
+        # identical math to eager; only changes speed/memory.
+        self._attn_implementation = attn_implementation
         # keep num_hidden_layers consistent with the pattern
         self.num_hidden_layers = len(self.layer_pattern)
 
@@ -114,7 +119,18 @@ class HybridMambaForMaskedLM(nn.Module):
             self.cls.predictions.decoder.weight = \
                 self.embeddings.word_embeddings.weight
 
+        self.gradient_checkpointing = False
         self.apply(self._init_weights)
+
+    def gradient_checkpointing_enable(self, gradient_checkpointing_kwargs=None):
+        self.gradient_checkpointing = True
+
+    def gradient_checkpointing_disable(self):
+        self.gradient_checkpointing = False
+
+    @staticmethod
+    def _bert_layer_call(layer, hidden, ext_mask):
+        return layer(hidden, attention_mask=ext_mask)[0]
 
     def _init_weights(self, module):
         if isinstance(module, nn.Linear):
@@ -139,11 +155,19 @@ class HybridMambaForMaskedLM(nn.Module):
             ext_mask = (1.0 - attention_mask[:, None, None, :].to(hidden.dtype))
             ext_mask = ext_mask * torch.finfo(hidden.dtype).min
 
+        use_ckpt = self.gradient_checkpointing and self.training
         for layer, is_m in zip(self.layers, self.is_mamba):
             if is_m:
-                hidden = layer(hidden)                       # Mamba (no mask)
+                if use_ckpt:
+                    hidden = checkpoint(layer, hidden, use_reentrant=False)
+                else:
+                    hidden = layer(hidden)                   # Mamba (no mask)
             else:
-                hidden = layer(hidden, attention_mask=ext_mask)[0]  # BertLayer
+                if use_ckpt:
+                    hidden = checkpoint(self._bert_layer_call, layer, hidden,
+                                        ext_mask, use_reentrant=False)
+                else:
+                    hidden = layer(hidden, attention_mask=ext_mask)[0]  # BertLayer
 
         logits = self.cls(hidden)
 

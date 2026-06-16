@@ -1,0 +1,7 @@
+[23s] train/val/test = 3465/385/15 (skipped >512nt or no-emb: 0/0/0)
+  [23s] epoch  5 loss=0.0193 val_F1=0.7776 (thr=0.01)
+  [23s] epoch 10 loss=0.0112 val_F1=0.8142 (thr=0.01)
+  [23s] epoch 15 loss=0.0067 val_F1=0.8820 (thr=0.09)
+  [23s] epoch 20 loss=0.0017 val_F1=0.9070 (thr=0.04)
+  [23s] epoch 25 loss=0.0010 val_F1=0.9163 (thr=0.11)
+[23s] TEST F1=0.3825 P=0.5951 R=0.2871 (thr=0.11, n=15)

@@ -1,0 +1,7 @@
+[tmRNA] train/val/test = 3063/340/462 (skipped >512nt or no-emb: 0/0/0)
+  [tmRNA] epoch  5 loss=0.0182 val_F1=0.8333 (thr=0.04)
+  [tmRNA] epoch 10 loss=0.0082 val_F1=0.8623 (thr=0.07)
+  [tmRNA] epoch 15 loss=0.0030 val_F1=0.8764 (thr=0.03)
+  [tmRNA] epoch 20 loss=0.0018 val_F1=0.8872 (thr=0.01)
+  [tmRNA] epoch 25 loss=0.0011 val_F1=0.9092 (thr=0.06)
+[tmRNA] TEST F1=0.5180 P=0.5989 R=0.4636 (thr=0.06, n=462)

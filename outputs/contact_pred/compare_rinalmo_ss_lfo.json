@@ -1,0 +1,16 @@
+{
+  "backbone": "hybrid-300M",
+  "pipeline": "RiNALMo (flexible F1, canonical+greedy decoder)",
+  "macro_F1": 0.7166,
+  "macro_precision": 0.8278,
+  "macro_recall": 0.6458,
+  "per_family": {
+    "5s": {
+      "F1": 0.7166,
+      "precision": 0.8278,
+      "recall": 0.6458,
+      "threshold": 0.08,
+      "n_test": 1283
+    }
+  }
+}
