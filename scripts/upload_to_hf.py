@@ -27,6 +27,9 @@ MODELS = {
     "kmer6-Hybrid":    "outputs/fm_hybrid_mamba_kmer6",
     "kmer6-decoder":   "outputs/fm_decoder_kmer6",
     "kmer1-Hybrid-300M": "outputs/fm_hybrid_mamba_kmer1_300m",
+    # Hybrid-650M, epoch-1 checkpoint (RiNALMo-Giga-aligned run; pretraining to be
+    # finished on H200 — see HANDOFF.md). Clean LM weights, no optimizer state.
+    "kmer1-Hybrid-650M-ep1": "outputs/fm_hybrid_650m/ss_ft_ep1_model",
 }
 # only top-level final-model files (bare names -> won't match checkpoint-*/ subdirs)
 ALLOW = ["config.json", "model.safetensors", "pytorch_model.bin",
